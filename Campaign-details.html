@@ -1,0 +1,133 @@
+<html>
+	<head>
+		<title>
+			Campaign-details
+		</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="description" content="">
+		<link href="css/main-style.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="css/jslider.css" type="text/css">
+		<link rel="stylesheet" href="css/jslider.round.css" type="text/css">
+		
+		
+		<script type="text/javascript" src="js/jquery-1.7.1.js"></script>
+		<script type="text/javascript" src="js/jshashtable-2.1_src.js"></script>
+		<script type="text/javascript" src="js/jquery.numberformatter-1.2.3.js"></script>
+		<script type="text/javascript" src="js/tmpl.js"></script>
+		<script type="text/javascript" src="js/jquery.dependClass-0.1.js"></script>
+		<script type="text/javascript" src="js/draggable-0.1.js"></script>
+		<script type="text/javascript" src="js/jquery.slider.js"></script>
+
+	</head>
+
+	<body>
+		<div class="main-container">
+			<div class="container-small">
+				<nav>
+					<ol class="cd-multi-steps text-bottom count">
+						<li class="visited">
+							<a href="#0">
+								Campaign Definition
+							</a>
+						</li>
+						<li class="visited" >
+							<a href="#0">
+								Target Groups
+							</a>
+						</li>
+						<li class="current">
+							<a href="#0">
+								Campaign Details
+							</a>
+						</li>
+						<li class="">
+							<a href="#0">
+								Incentives
+							</a>
+						</li>
+						<li class="">
+							<a href="#0">
+								Targets
+							</a>
+						</li>
+					</ol>
+				</nav>
+
+				<form class="camp-detail-form" method="post">
+					<p>
+						Please form a set of questions you'd like to get feedback on from your target audiences:
+					</p>
+					<div class="row">
+						<label>
+							Question Type
+						</label>
+						<select>
+							<option>
+								Scale1
+							</option>
+							<option>
+								Scale2
+							</option>
+							<option>
+								Scale3
+							</option>
+							<option>
+								Scale4
+							</option>
+						</select>
+					</div>
+
+					<div class="row">
+						<label>
+							Question text
+						</label>
+						<input type="text" >
+
+
+					</div>
+
+					<div class="row">
+						<label>
+							Scale
+						</label>
+						<div class="layout-slider">
+							<input id="SliderSingle" type="slider" name="price" value="20" />
+						</div>
+						<script type="text/javascript" charset="utf-8">
+							jQuery("#SliderSingle").slider({ from: 0, to: 100, step: 2.5, round: 1, format: { format: '0.##', locale: 'de' }, dimension: '&nbsp;', skin: "round" });
+						</script>
+					</div>
+
+					<div class="row">
+						<label>
+							Target Group
+						</label>
+						<select>
+							<option>
+								All
+							</option>
+							<option>
+								All1
+							</option>
+							<option>
+								All2
+							</option>
+							<option>
+								All3
+							</option>
+						</select>
+					</div>
+					<div class="add-question">
+						<input type="button" value="Add a Question" name="add-ques">
+					</div>
+					<div class="bottom-btn">
+						<input type="button" value="Cancel" name="cancel">
+						<a href="Incentives.html" target="_self"><input type="button" value="Next" name="next"></a>
+					</div>
+				</form>
+
+			</div>
+		</div>
+	</body>
+</html>

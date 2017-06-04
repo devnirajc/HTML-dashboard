@@ -1,0 +1,23 @@
+@media screen and (max-width: 768px){
+	p{
+		/*font-size: 18px !important;*/
+	}
+}
+
+@media screen and (max-width: 640px){
+	p{
+		/*font-size: 17px !important;*/
+	}
+	label{
+		font-size: 14px !important;
+	}
+	input[type="submit"]{
+		font-size: 14px !important;
+	}
+}
+
+@media screen and (max-width: 480px){
+	p, select, textarea, input[type="text"], input[type="password"], label, input[type="button"]{
+		font-size: 13px !important;
+	}
+}
