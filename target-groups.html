@@ -1,0 +1,288 @@
+<html>
+	<head>
+		<title>
+		</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="description" content="">
+		<link href="css/main-style.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="css/jslider.css" type="text/css">
+		<link rel="stylesheet" href="css/jslider.round.css" type="text/css">
+		
+		
+		<script type="text/javascript" src="js/jquery-1.7.1.js"></script>
+		<script type="text/javascript" src="js/jshashtable-2.1_src.js"></script>
+		<script type="text/javascript" src="js/jquery.numberformatter-1.2.3.js"></script>
+		<script type="text/javascript" src="js/tmpl.js"></script>
+		<script type="text/javascript" src="js/jquery.dependClass-0.1.js"></script>
+		<script type="text/javascript" src="js/draggable-0.1.js"></script>
+		<script type="text/javascript" src="js/jquery.slider.js"></script>
+	</head>
+
+	<body>
+		<div class="main-container">
+			<div class="container-small">
+				<nav>
+					<ol class="cd-multi-steps text-bottom count">
+						<li class="visited">
+							<a href="#0">
+								Campaign Definition
+							</a>
+						</li>
+						<li class="current" >
+							<a href="#0">
+								Target Groups
+							</a>
+						</li>
+						<li class="">
+							<a href="#0">
+								Campaign Details
+							</a>
+						</li>
+						<li class="">
+							<a href="#0">
+								Incentives
+							</a>
+						</li>
+						<li class="">
+							<a href="#0">
+								Targets
+							</a>
+						</li>
+					</ol>
+				</nav>
+
+				<form class="target-group-form" method="post">
+					<p>
+						You can define as many target groups or edit existing ones
+					</p>
+					<div class="row">
+						<label>
+							Target Group
+						</label>
+						<select>
+							<option>
+								Young tier2 males
+							</option>
+							<option>
+								Young tier3 males
+							</option>
+							<option>
+								Young tier4 males
+							</option>
+							<option>
+								Young tier5 males
+							</option>
+						</select>
+					</div>
+					<div class="row">
+						<ul>
+							<li>
+								Target Group Definition
+							</li>
+							<li>
+								Total Population: 1.2 Million
+							</li>
+						</ul>
+					</div>
+					<div class="row">
+						<label>
+							Gender
+						</label>
+						
+						<input type="radio" name="group1" value="Male" checked="check">
+						</input>
+						<label>
+							Male
+						</label>
+
+						<input type="radio" name="group1" value="Female">
+						</input>
+						<label>
+							Female
+						</label>
+
+
+					</div>
+
+					<div class="row">
+						<label>
+							Age
+						</label>
+						<div class="layout-slider">
+							<input id="SliderSingle" type="slider" name="price" value="20" />
+						</div>
+						<script type="text/javascript" charset="utf-8">
+							jQuery("#SliderSingle").slider({ from: 0, to: 100, step: 2.5, round: 1, format: { format: '0.##', locale: 'de' }, dimension: '&nbsp;', skin: "round" });
+						</script>
+					</div>
+
+					<div class="geo">
+						<div class="left-geo">
+							<label>
+								Geo
+							</label>
+						</div>
+						<div class="right-geo">
+							<div class="row">
+								<input type="checkbox" value="Metros" name="Metros">
+								<label>
+									Metros
+								</label>
+							</div>
+
+							<div class="row">
+								<input type="checkbox" value="Tier2" name="Tier2">
+								<label>
+									Tier 2
+								</label>
+							</div>
+
+							<div class="row">
+								<input type="checkbox" value="Tier3" name="Tier3">
+								<label>
+									Tier 3
+								</label>
+							</div>
+
+							<div class="row">
+								<input type="checkbox" value="custom" name="custom1">
+								<label>
+									Create your own..
+								</label>
+								<input type="text" name="geo" placeholder="Pune, Nashik, Kolhapur">
+							</div>
+
+
+						</div>
+					</div>
+
+					<div class="geo">
+						<div class="left-geo">
+							<label>
+								Employer
+							</label>
+						</div>
+						<div class="right-geo">
+							<div class="row">
+								<input type="checkbox" value="IT" name="it">
+								<label>
+									IT
+								</label>
+							</div>
+
+							<div class="row">
+								<input type="checkbox" value="banking" name="banking">
+								<label>
+									Banking
+								</label>
+							</div>
+
+							<div class="row">
+								<input type="checkbox" value="fortune" name="fortune">
+								<label>
+									Fortune 500
+								</label>
+							</div>
+
+							<div class="row">
+								<input type="checkbox" value="customemp" name="emp-custom">
+								<label>
+									Create your own..
+								</label><input type="text" name="emp" placeholder="ICICI, Citibank, Infosys">
+							</div>
+						</div>
+
+					</div>
+
+					<div class="geo">
+						<div class="left-geo">
+							<label>
+								Interests
+							</label>
+						</div>
+						<div class="right-geo">
+							<div class="row">
+								<input type="checkbox" value="shopper" name="shopper" checked="check">
+								<label>
+									Online Shopper
+								</label>
+							</div>
+
+							<div class="row">
+								<input type="checkbox" value="work" name="work">
+								<label>
+									Working Moms
+								</label>
+							</div>
+
+							<div class="row">
+								<input type="checkbox" value="housewise" name="housewife">
+								<label>
+									Housewives
+								</label>
+							</div>
+
+							<div class="row">
+								<input type="checkbox" value="custom1" name="custom1">
+								<label>
+									Create your own..
+								</label>
+								<input type="text" name="interest" placeholder="Nirma, Cadbury, Pampers">
+							</div>
+						</div>
+					</div>
+
+					<div class="geo blue-border">
+						<div class="left-geo">
+							<label>
+								Relationship
+							</label>
+						</div>
+						<div class="right-geo">
+							<div class="row">
+								<input type="checkbox" value="single" name="single">
+								<label>
+									Single
+								</label>
+							</div>
+
+							<div class="row">
+								<input type="checkbox" value="married" name="married">
+								<label>
+									Married
+								</label>
+							</div>
+
+							<div class="row">
+								<input type="checkbox" value="divorcee" name="divorcee">
+								<label>
+									Divorcee
+								</label>
+							</div>
+
+							<div class="row">
+								<input type="checkbox" value="parent" name="parent">
+								<label>
+									Parent
+								</label>
+							</div>
+
+							<div class="row">
+								<input type="checkbox" value="engaged" name="engaged">
+								<label>
+									Engaged
+								</label>
+							</div>
+
+						</div>
+					</div>
+					<div class="bottom-btn">
+						<input type="button" value="Cancel" name="cancel">
+						<a href="Campaign-details.html" target="_self"><input type="button" value="Next" name="next"></a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>
